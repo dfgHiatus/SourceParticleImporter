@@ -1,5 +1,4 @@
-﻿using Datamodel;
-using DM = Datamodel.Datamodel;
+﻿using DM = Datamodel.Datamodel;
 
 namespace SourceParticleImporter.Tests;
 

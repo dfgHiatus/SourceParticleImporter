@@ -57,7 +57,9 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DMXConverter.cs" />
+    <Compile Include="Model\Source2NeosParticle.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="Patches\UniversalImportPatch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SourceParticleImporter.cs" />
   </ItemGroup>
