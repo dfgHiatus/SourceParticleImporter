@@ -1,13 +1,12 @@
 ﻿using DM = Datamodel.Datamodel;
 
 
-namespace SourceParticleImporter.Model
+namespace SourceParticleImporter.Model;
+
+internal static class DatamodelExtensions
 {
-    internal static class DatamodelExtensions
+    internal static T PCFToNeosValue<T>(this DM dm, string key, T defaultValue = default)
     {
-        internal static T PCFToNeosValue<T>(this DM dm, string key)
-        {
-            return dm.Root.TryGetValue(key, out object obj) ? (T)obj : default;
-        }
+        return dm.Root.TryGetValue(key, out object obj) ? (T)obj : defaultValue;
     }
 }

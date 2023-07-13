@@ -24,11 +24,10 @@ internal class Source2NeosParticle
 
                 var ps = slot.AttachComponent<ParticleSystem>();
                 var style = ps.Style.Target;
-                item.
 
                 var emitter = ps.AttachEmitter<SphereEmitter>();
-                emitter.Radius.Value = dm.PCFToNeosValue<float>("radius");
-
+                emitter.Radius.Value = dm.PCFToNeosValue("radius", emitter.Radius.Value);
+                emitter.Rate.Value = item.PCFToNeosValue("emission_rate", emitter.Radius.Value);
 
                 if (max != null) ps.MaxParticles.Value = (int) max;
             }
