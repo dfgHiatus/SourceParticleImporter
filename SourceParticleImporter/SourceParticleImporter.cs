@@ -11,7 +11,10 @@ namespace SourceParticleImporter
         public override string Version => "1.0.0";
         public override string Link => "";
 
-        public static ModConfiguration config;
+        public static ModConfiguration Config;
+
+        public static readonly ModConfigurationKey<string> DMXConverterPath 
+            = new ("SourceParticleImporter", "dmxConverterPath", () => "");
 
         public override void DefineConfiguration(ModConfigurationDefinitionBuilder builder)
         {
@@ -23,7 +26,7 @@ namespace SourceParticleImporter
         public override void OnEngineInit()
         {
             new Harmony("net.dfgHiatus.SourceParticleImporter").PatchAll();
-            config = GetConfiguration();
+            Config = GetConfiguration();
         }
     }
 }

@@ -24,11 +24,33 @@ public class UniversalImporterPatch
 
         foreach (var sp in sourceParticles)
         {
-            Source2NeosParticle.SetupSourceParticle(sp);
+            SetupNeosParticleSystem(Source2NeosParticle.SetupSourceParticle(sp).Result);
         }
 
         if (nonSourceParticles.Count <= 0) return false;
         files = nonSourceParticles.ToArray();
         return true;
+    }
+
+    private static void SetupNeosParticleSystem(DmeElement dmeElement)
+    {
+    //    var slot = Engine.Current.WorldManager.FocusedWorld.AddSlot(dmeElement.Name);
+    //    slot.PositionInFrontOfUser();
+
+    //    object max = null;
+    //    dm.Root.TryGetValue("max_particles", out max); // May need to get first child
+
+    //    var ps = slot.AttachComponent<ParticleSystem>();
+    //    var style = ps.Style.Target;
+
+    //    float @in = item.PCFToNeosValue("start_alpha", 0f);
+    //    float @out = item.PCFToNeosValue("end_alpha", 1f);
+    //    style.SetupAlphaFadeInFadeOut(@in, @out);
+
+    //    var emitter = ps.AttachEmitter<SphereEmitter>();
+    //    emitter.Radius.Value = dm.PCFToNeosValue("radius", emitter.Radius.Value);
+    //    emitter.Rate.Value = item.PCFToNeosValue("emission_rate", emitter.Radius.Value);
+
+    //    if (max != null) ps.MaxParticles.Value = (int)max;
     }
 }

@@ -1,4 +1,5 @@
-﻿using DM = Datamodel.Datamodel;
+﻿using Datamodel;
+using DM = Datamodel.Datamodel;
 
 namespace SourceParticleImporter.Tests;
 
@@ -14,6 +15,7 @@ internal class Program
             using (FileStream fileStream = File.OpenRead(file))
             {
                 var dm = DM.Load(fileStream);
+                dm.Root.Get<ElementArray>("particleSystemDefinitions");
             }
         }
     }

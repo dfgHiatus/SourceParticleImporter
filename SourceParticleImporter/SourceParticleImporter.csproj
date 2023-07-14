@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UnityPackageImporter</RootNamespace>
-    <AssemblyName>UnityPackageImporter</AssemblyName>
+    <RootNamespace>SourceParticleImporter</RootNamespace>
+    <AssemblyName>SourceParticleImporter</AssemblyName>
     <LangVersion>10</LangVersion>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -57,7 +57,11 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\DatamodelExtensions.cs" />
+    <Compile Include="Extensions\ElementExtensions.cs" />
+    <Compile Include="Model\Types\Renderer.cs" />
     <Compile Include="Model\Source2NeosParticle.cs" />
+    <Compile Include="Model\SourceParticleModel.cs" />
     <Compile Include="Utils.cs" />
     <Compile Include="Patches\UniversalImportPatch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
