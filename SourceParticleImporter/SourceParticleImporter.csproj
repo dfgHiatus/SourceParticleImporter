@@ -59,6 +59,12 @@
   <ItemGroup>
     <Compile Include="Extensions\DatamodelExtensions.cs" />
     <Compile Include="Extensions\ElementExtensions.cs" />
+    <Compile Include="Model\Types\Children.cs" />
+    <Compile Include="Model\Types\Constraint.cs" />
+    <Compile Include="Model\Types\Emitter.cs" />
+    <Compile Include="Model\Types\Forces.cs" />
+    <Compile Include="Model\Types\Initializer.cs" />
+    <Compile Include="Model\Types\Operator.cs" />
     <Compile Include="Model\Types\Renderer.cs" />
     <Compile Include="Model\Source2NeosParticle.cs" />
     <Compile Include="Model\SourceParticleModel.cs" />
